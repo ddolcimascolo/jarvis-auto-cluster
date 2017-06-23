@@ -1,0 +1,8 @@
+[Unit]
+Description=Broadcasts Jarvis presence every minute
+
+[Timer]
+OnCalendar=*:0/1
+
+[Install]
+WantedBy=timers.target

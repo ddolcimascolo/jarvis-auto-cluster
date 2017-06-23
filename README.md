@@ -1,22 +1,8 @@
-<!---
-IMPORTANT
-=========
-This README.md is displayed in the WebStore as well as within Jarvis app
-Please do not change the structure of this file
-Fill-in Description, Usage & Author sections
-Make sure to rename the [en] folder into the language code your plugin is written in (ex: fr, es, de, it...)
-For multi-language plugin:
-- clone the language directory and translate commands/functions.sh
-- optionally write the Description / Usage sections in several languages
--->
 ## Description
-Description of your Plugin
+This plugins automatically manages a cluster of Jarvis-es by maintaing IP adresses in the hosts file
 
 ## Usage
-```
-You: example of how to trigger the command
-Jarvis: output from Jarvis
-```
+There is no settings, nothing to enable. Everything's automatic.
 
 ## Author
-[your name](http://your.website)
+[David DOLCIMASCOLO](https://linagora.com)

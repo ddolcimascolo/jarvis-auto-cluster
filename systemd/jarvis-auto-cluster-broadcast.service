@@ -1,0 +1,14 @@
+[Unit]
+Description=Broadcast Jarvis presence
+
+[Service]
+ExecStart=/home/pi/jarvis/plugins_installed/jarvis-auto-cluster/systemd/broadcast.sh
+StandardOutput=syslog
+SyslogIdentifier=jarvis
+User=pi
+Group=pi
+Environment=PATH=/usr/bin:/usr/local/bin:/bin
+WorkingDirectory=/home/pi/jarvis/plugins_installed/jarvis-auto-cluster
+
+[Install]
+WantedBy=multi-user.target

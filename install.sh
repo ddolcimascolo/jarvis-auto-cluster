@@ -1,3 +1,10 @@
 #!/bin/bash
-# This file will be automatically sourced at the installation of your plugin
-# Use only if you need to perform changes on the user system such as installing software
+
+sudo apt-get install --yes --force-yes socat
+
+sudo systemctl enable /home/pi/jarvis/plugins_installed/jarvis-auto-cluster/systemd/jarvis-auto-cluster-listen.service
+sudo systemctl enable /home/pi/jarvis/plugins_installed/jarvis-auto-cluster/systemd/jarvis-auto-cluster-broadcast.service
+sudo systemctl enable /home/pi/jarvis/plugins_installed/jarvis-auto-cluster/systemd/jarvis-auto-cluster-broadcast.timer
+
+sudo systemctl start jarvis-auto-cluster-listen.service
+sudo systemctl start jarvis-auto-cluster-broadcast.timer

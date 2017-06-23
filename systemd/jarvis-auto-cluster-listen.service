@@ -1,0 +1,15 @@
+[Unit]
+Description=Listening for other Jarvis-es presence and reply with name and IPv4 address
+
+[Service]
+ExecStart=/usr/bin/socat UDP4-RECVFROM:65432,broadcast,fork EXEC:/home/pi/jarvis/plugins_installed/jarvis-auto-cluster/systemd/updateHostsFile.sh
+Restart=always
+StandardOutput=syslog
+SyslogIdentifier=jarvis
+User=pi
+Group=pi
+Environment=PATH=/usr/bin:/usr/local/bin:/bin
+WorkingDirectory=/home/pi/jarvis/plugins_installed/jarvis-auto-cluster
+
+[Install]
+WantedBy=multi-user.target
