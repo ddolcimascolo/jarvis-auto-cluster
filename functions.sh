@@ -23,7 +23,7 @@ function jv_pg_ac_askClusterMember() {
     )
 
     case "${sc}" in
-        "200") say "$(cat ${jv_pg_ac_tmp} | jq -r '. | reverse | .[0].answer')";;
+        "200") say "$(cat ${jv_pg_ac_tmp} | jq -r ". | reverse | .[0].answer // \"$(jv_pg_ac_i18n DONE)\"")";;
         *) say "${phrase_failed}"
     esac
 }
