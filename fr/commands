@@ -1,3 +1,4 @@
 *ETAT*CLUSTER*==jv_pg_ac_status
 
+*DEMANDE A ALEX A (*)|*DIS A ALEX A (*)==jv_pg_ac_askClusterMember "Alexa" "(1)"
 *DEMANDE A ([^ ]+) (*)|*DIS A ([^ ]+) (*)==jv_pg_ac_askClusterMember "(1)" "(2)"
